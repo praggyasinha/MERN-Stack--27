@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tool Tip</title>
+    <style>
+      .tool-tip-example::after {
+        content: "(end)";
+        color: red;
+      }
+      .tool-tip-example::before {
+        content: "(first)";
+        color: green;
+      }
+      .form-control {
+        margin: 5px;
+        color:#b50808
+      }
+      input.form-control::placeholder{
+        color:green;
+        font-style: italic;
+        font-size: 10px;
+      }
+      .list {
+        color:#929292;
+      }
+      /* .list li:first-child,.list li:last-child{ */
+      .list li:nth-child(2n){
+        color:red;
+        background-color: #929292;
+      }
+      .list li:nth-child(2n+1){
+        color:green;
+        background-color: aquamarine;
+        color :rgb(192, 0, 0)
+      }
+    </style>
+  </head>
+  <body>
+<!-- 
+    rgb  0-255 ff ->  15*15-> 255 
+    red-> #ff0000 -> rgb(255,0,0)
+    red -> #f00
+
+    #000000 -----------#545454-- #696969-- #929292-------------#ffffff
+    #000000-------#890000--------#ff0000 --------#ff4545------- #ffffff
+    rgba -->
+    <button class="tool-tip-example">some value</button>
+    <form action="" class="form-group">
+      <div>
+        <input type="text" class="form-control"  placeholder="First Name"/>
+      </div>
+      <div>
+        <input type="text" class="form-control"  placeholder="Last Name"/>
+      </div>
+    </form>
+
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Asperiores, fugit.</li>
+    </ul>
+    
+    <ul class="list">
+        <li>Lorem, ipsum.</li>
+        <li>Laudantium, laboriosam.</li>
+        <li>Amet, error?</li>
+        <li>Vitae, dolores?</li>
+        <li>Aspernatur, hic?</li>
+        <li>Sunt, ullam.</li>
+        <li>Esse, doloribus!</li>
+        <li>Id, magnam.</li>
+        <li>Vitae, ipsa.</li>
+        <li>Optio, quis.</li>
+    </ul>
+  </body>
+</html>

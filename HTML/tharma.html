@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+    <style>
+      .temp {
+        max-height: 360px;
+        overflow: hidden;
+        position: relative;
+        width: 409px;
+      }
+      .temp:hover img {
+        position: relative;
+      }
+
+      .temp .para {
+        height: 250px;
+        position: absolute;
+        top: 75px;
+        left: 155px;
+        z-index: -1;
+        width: 51px;
+        overflow: hidden;
+      }
+      .temp .para p {
+        background-color: red;
+        width: 55px;
+        position: absolute;
+        bottom: -17px;
+      }
+      .temp:hover .para p {
+        height: 250px;
+        transition-timing-function: ease-in-out;
+        z-index: -1;
+        transition: 2s, 10s, 13s, 2s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="temp">
+        <img src="https://i.ibb.co/MsHpn2N/thermometer.png" alt="thermometer" />
+        <div class="para">
+          <p>a</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

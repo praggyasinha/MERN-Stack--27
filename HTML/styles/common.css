@@ -1,0 +1,9 @@
+body{
+    margin: 0px;
+}
+div{
+    border: 2px #000000 solid;
+    border: 2px #ff0000 solid;
+    border-style: dashed;
+    margin: 2px;
+}

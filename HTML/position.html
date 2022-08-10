@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+      nav ul {
+        list-style-type: none;
+        float: right;
+
+      }
+      nav ul li{
+        float:left;
+        margin: 0px 1px;
+        background-color: rgb(255, 0, 60);
+        padding:3px 5px
+      }
+      nav ul li a{
+        text-decoration: none;
+        color:rgb(245, 245, 245);
+      }
+
+      .tooltip {
+        position: relative;
+      }
+      .tooltip-desc {
+        position: absolute;
+        display: none;
+      }
+      .tooltip-element:hover + .tooltip-desc {
+        display: block;
+        left: 60px;
+        top: 0px;
+        background-color: rgb(52, 52, 52);
+        color: white;
+      }
+      .tooltip-desc::before {
+        content: "";
+        left: -7px;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-right: 10px solid rgb(52, 52, 52);
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        top: 6px;
+      }
+      .clear-fix{
+        clear:both;
+      }
+      #logoImg{
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <navbar>
+        <div id="logoImg"><img src="https://dummyimage.com/70x50/000/fff&text=Logo" alt="" /></div>
+        <nav>
+          <ul>
+            <li><a href="1">item 1</a></li>
+            <li><a href="2">item 2</a></li>
+            <li><a href="3">item 3</a></li>
+            <li><a href="4">item 4</a></li>
+          </ul>
+        </nav>
+      </navbar>
+      <div class="clear-fix"></div>
+    </header>
+
+
+    <div class="container">
+      <div class="details">
+        <div class="tooltip">
+          <button class="tooltip-element">Item 1</button>
+          <div class="tooltip-desc">
+            <h3>Button info</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Officiis, debitis.
+            </p>
+          </div>
+        </div>
+        <div class="tooltip">
+          <button class="tooltip-element">Item 2</button>
+          <div class="tooltip-desc">
+            <h3>Button info</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Officiis, debitis.
+            </p>
+          </div>
+        </div>
+        <div class="tooltip">
+          <button class="tooltip-element">Item 3</button>
+          <div class="tooltip-desc">
+            <h3>Button info</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Officiis, debitis.
+            </p>
+          </div>
+        </div>
+        <div class="tooltip">
+          <button class="tooltip-element">Item 4</button>
+          <div class="tooltip-desc">
+            <h3>Button info</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Officiis, debitis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
