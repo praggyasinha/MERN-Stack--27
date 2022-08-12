@@ -72,8 +72,8 @@
 var slNo = 1;
 var nameVal = "xyz";
 var isSuccuss = true;
-var nullVal=null;
-var undefinedVal=undefined;
+var nullVal = null;
+var undefinedVal = undefined;
 console.log(typeof slNo);
 console.log(typeof slNo);
 console.log(typeof nameVal);
@@ -91,11 +91,11 @@ console.log(subjectList[3]);
 
 console.log(typeof subjectList);
 
-var details={
-    id:1,
-    name:'Dinesh',
-    subject:'React',
-    location:'BLR'
+var details = {
+    id: 1,
+    name: 'Dinesh',
+    subject: 'React',
+    location: 'BLR'
 
 };
 console.log(details);
@@ -106,15 +106,48 @@ console.log(details.name);
 console.log(typeof details);
 
 
-var checkArr=Array.isArray(subjectList);
+var checkArr = Array.isArray(subjectList);
 console.log(checkArr);
 
-const schoolsName=[];
-var checkArr1=Array.isArray(schoolsName);
+const schoolsName = [];
+var checkArr1 = Array.isArray(schoolsName);
 console.log(checkArr1);
 
-var checkArr2=Array.isArray(details);
+var checkArr2 = Array.isArray(details);
 console.log(checkArr2);
 
-console.log(nullVal===null);
+console.log(nullVal === null);
+
+var detail = {
+    id: 1,
+    name: 'Dinesh',
+    subject: 'React',
+    address: {
+        street1: 'a',
+        street2: 'b',
+        city: 'BLR'
+    }
+};
+console.log(detail.address.city);
+
+function sum(num1,num2){
+    console.log(num1+num2);
+}
+console.log(typeof sum);
+const sumObj=new sum(1,2);
+console.log(typeof sumObj);
+// console.log( sumObj instanceof sum );
+console.log(JSON.stringify(detail));
+// console.log(JSON.parse(JSON.stringify('sdfs')));
+
+console.log(subjectList.length);
+var someArr=[];
+console.log(someArr.length ==0);
+
+console.log(Object.keys(detail).length==0); // to check empty object
+var someObj={};
+console.log(Object.keys(someObj).length==0); // to check empty object
+
+
+
 
