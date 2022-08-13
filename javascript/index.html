@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
     <!-- <script src="./class-1.js"></script> -->
-    <script src="./class-2-copy.js"></script>
+    <!-- <script src="./class-2-copy.js"></script> -->
+    <script src="./condition.js"></script>
 </head>
+
 <body>
     <h2>Javascript Session</h2>
+    <input type="text" id="numberinput">
+    <button onclick="checkOddEven()">Check</button>
+    <p id="showResult"></p>
+    <script>
+
+        function checkOddEven() {
+            const inputedNumber = document.getElementById('numberinput').value;
+            let result = '';
+            if (inputedNumber % 2 == 0) {
+                result = `${inputedNumber} is even number`;
+            } else {
+                result = `${inputedNumber} is odd number`;
+            }
+            document.getElementById('showResult').innerText = result;
+        }
+    </script>
 </body>
+
 </html>
