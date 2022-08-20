@@ -39,13 +39,35 @@
 
 
 
-for (let count1 = 0; count1<=2; count1++) {
-    setTimeout(function(){
-        console.log(count1);
-    },500);
-    console.log({count1});
-}
+// for (let count1 = 0; count1<=2; count1++) {
+//     setTimeout(function(){
+//         console.log(count1);
+//     },500);
+//     console.log({count1});
+// }
 // console.log(count1);
+
+
+// var result=0;
+// setTimeout(function () {
+//     result=3;
+// }, 500);
+// console.log(result);
+var result = 0;
+const promiseObject = new Promise((resolve, reject) => {
+    setTimeout(function () {
+        result = 3;// some calculation
+        resolve(result);
+        // console.log(result,'sdfsdf');
+    }, 5000);
+});
+promiseObject.then(res=>{
+    console.log({res});
+})
+console.log({result});
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
 
 
 
