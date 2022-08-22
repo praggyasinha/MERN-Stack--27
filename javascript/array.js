@@ -10,12 +10,12 @@ var updatedArray = numberList.map(item => {
 
 var studentsDetails = [
     { id: 1, name: 'a' },
-    { id: 2, name: 'a' },
-    { id: 3, name: 'a' },
-    { id: 4, name: 'a' },
-    { id: 5, name: 'a' },
-    { id: 5, name: 'a' },
-    { id: 6, name: 'a' }
+    { id: 2, name: 'ab' },
+    { id: 3, name: 'ac' },
+    { id: 4, name: 'ac' },
+    { id: 5, name: 'ab' },
+    { id: 5, name: 'ad' },
+    { id: 6, name: 've' }
 ];
 var stDetails = studentsDetails.map(student => {
     // return  { id: student.id, name: student.name,formedName: `${ student.id} ${ student.name}`};
@@ -23,6 +23,13 @@ var stDetails = studentsDetails.map(student => {
 })
 console.log(stDetails);
 
+// const filtedDetails=studentsDetails.filter(student=>student.id===6)
+// const filtedDetails=studentsDetails.filter(student=>student.name==='ac')
+const filtedDetails=studentsDetails.filter(student=>student.name.startsWith('a'))
+// studentsDetails.filter(student=>{
+//     return student.id===6;
+// })
+console.log(filtedDetails);
 
 
 
