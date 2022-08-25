@@ -53,22 +53,66 @@
 //     result=3;
 // }, 500);
 // console.log(result);
-var result = 0;
-const promiseObject = new Promise((resolve, reject) => {
-    setTimeout(function () {
-        result = 3;// some calculation
-        resolve(result);
-        // console.log(result,'sdfsdf');
-    }, 5000);
-});
-promiseObject.then(res=>{
-    console.log({res});
-})
-console.log({result});
+// var result = 0;
+// const promiseObject = new Promise((resolve, reject) => {
+//     setTimeout(function () {
+//         result = 3;// some calculation
+//         resolve(result);
+//         // console.log(result,'sdfsdf');
+//     }, 5000);
+// });
+// promiseObject.then(res=>{
+//     console.log({res});
+// })
+// console.log({result});
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 
+
+// const promiseObject = new Promise((resolve, reject) => {
+//     setTimeout(function () {
+//         result = 3;// some calculation
+//         resolve(result);
+//         // console.log(result,'sdfsdf');
+//     }, 5000);
+// });
+// promiseObject.then(res=>{
+//     console.log(res);
+//     return Promise.resolve(res*2);
+// }).then(response=>{
+//     console.log(response);
+//     // console.log('after promise');
+// });
+// console.log('after promise');
+
+const asyncResFuntion = async function () {
+    const promiseObject=  new Promise((resolve, reject) => {
+        setTimeout(function () {
+            result = 3;// some calculation
+            resolve(result);
+            // console.log(result,'sdfsdf');
+        }, 5000);
+    });
+    return await promiseObject;
+}
+
+async function processResponse(){
+
+    // asyncResFuntion().then(res=>{
+    //     console.log({res});
+    // })
+    // .then(()=>console.log('step 1'))
+    // .then(()=>console.log('step 2'))
+    // .then(()=>console.log('step 3'))
+    // .then(()=>console.log('step 4'));
+    const asyncRes= await  asyncResFuntion();
+    console.log( {asyncRes})
+}
+processResponse()
+
+
+// console.log('after promise');
 
 
 
