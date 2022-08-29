@@ -9,12 +9,28 @@
 //     })
 //     .then(json => console.log(json))
 
+function showForm(){
+    // document.querySelector('#newPostForm').style.display='block';
+    // document.getElementById('newPostForm').style.display='block';
+    document.querySelector('#newPostForm').classList.remove('hide');
+    document.querySelector('#hideFormButton').classList.remove('hide');
+    document.querySelector('#showFormButton').classList.add('hide');
+
+}
+function hideForm(){
+    // document.querySelector('#newPostForm').style.display='none';
+    document.querySelector('#newPostForm').classList.add('hide');
+    document.querySelector('#hideFormButton').classList.add('hide');
+    document.querySelector('#showFormButton').classList.remove('hide');
+}
+
 async function getRequest(url) {
     return await fetch(url)
         .then(response => response.json());
 }
-async function showInPage() {
-    const postList = await getRequest('http://localhost:3030/posts')
+let postList=[];
+function showPostInPage() {
+
     // console.log(postList)
     postListContent = '';
     for (const post of postList) {
@@ -28,16 +44,29 @@ async function showInPage() {
     document.getElementById('postList').innerHTML
         = postListContent;
 }
-showInPage();
 
-function newPostSubmit(e) {
+
+async function fetchAllPost(){
+    postList = await getRequest('http://localhost:3030/posts');
+    showPostInPage();
+}
+fetchAllPost();
+
+async function newPostSubmit(e) {
     e.preventDefault();
-    let titleValue = newPostForm.querySelector('form[name="new-post-form"] [name="title"]').value
-    let description = newPostForm.querySelector('form[name="new-post-form"] [name="description"]').value;
+    let titleValueEle = document.querySelector(' [name="title"]');
+    let descriptionEle = document.querySelector('[name="description"]');
     // console.log({ titleValue, description });
-    let newPost = { title: titleValue, body: description };
-    createNewPost(newPost);
-    return false;
+    let newPost = { title: titleValueEle.value, body: descriptionEle.value };
+    const newCreatedPost=await createNewPost(newPost);
+    // alert('New Post got created');
+    console.log(newCreatedPost);
+    postList.splice(0,0,newCreatedPost);
+    // postList=[newCreatedPost,...postList];
+    showPostInPage();
+    titleValueEle.value='';
+    descriptionEle.value='';
+    hideForm();
 
 }
 
