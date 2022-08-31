@@ -6,7 +6,7 @@
 // showDetails();
 // showDetails('Dinesh','India');
 // new showDetails();
-// new showDetails('Dinesh','India');
+// new showDetails('Dinesh11','India');
 
 
 class ShowDetails{
@@ -17,8 +17,47 @@ class ShowDetails{
     showLog(){
         console.log(this);
     }
+    showFullDetails(){
+        return `${this.name} ${this.address}`;
+    }
 }
 
-// let showDetailsObj=new ShowDetails('dinesh','India');
-// showDetailsObj.showLog();
-(new ShowDetails('dinesh','India')).showLog();
+class Calculation{
+    static randowNumber(){
+        return Math.random();
+    }
+    getAbsoluteNumber(num){
+        return Math.abs(num);
+    }
+}
+
+// (new ShowDetails('dinesh','India')).showLog();
+let showDetailsObj=new ShowDetails('dinesh','India');
+showDetailsObj.showLog();
+
+
+console.log(Calculation.randowNumber());
+let calcObj=new Calculation();
+console.log(calcObj.getAbsoluteNumber(-243));
+
+
+class Counter{
+    static count=0;
+    constructor(){
+        Counter.count++;
+    }
+    getCountValue(){
+        return Counter.count;
+    }
+}
+
+let counObj=new Counter(); //1
+console.log(counObj.getCountValue());
+let counObj1=new Counter(); // 2
+console.log(counObj.getCountValue());
+console.log(counObj1.getCountValue());
+let counObj2=new Counter(); // 3
+console.log(counObj1.getCountValue());
+let counObj3=new Counter(); // 4
+console.log(counObj.getCountValue());
+
