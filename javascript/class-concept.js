@@ -67,6 +67,15 @@ class Student {
     constructor(name) {
         console.log('inside constructor', this.name);
         this._name = name;
+        this.details = {
+            firstname: 'Vamsi',
+            lastname: 'krishna',
+            address:{
+                street:'1',
+                city:'BLR',
+                state:'KA'
+            }
+        }
     }
 
     // getName(){
@@ -81,13 +90,29 @@ class Student {
     }
 
     set name(newName) {
-        this._name = newName;
+        this._name = newName.toUpperCase();
     }
+    get city() {
+        return this.details?.address?.city;
+    }
+    set city(cityVal) {
+        if (this.details.address) {
+            this.details.address.city = cityVal;
+        }
+
+    }
+
+
 }
 let studentObj = new Student('Gopal');
 console.log(studentObj.name);
 studentObj.name = 'Chand';
 console.log(studentObj.name);
+// console.log(studentObj.details.address.city);
+console.log(studentObj.city);
+// studentObj.details.address.city='Hydra'
+studentObj.city = 'Hydra';
+console.log(studentObj.city);
 
 
 
