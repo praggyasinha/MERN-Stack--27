@@ -2,6 +2,17 @@ import profileImg from '../media/images/profile-img.jpg';
 import './Users.css';
 
 import Card from 'react-bootstrap/Card';
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  background-color: black;
+  font-size: 32px;
+  color: white;
+`;
+const ShowMoreStyledLink = styled.a`
+    color:red;
+    text-transform: uppercase;
+`
 
 function Users() {
     const userDetails = [{
@@ -30,6 +41,10 @@ function Users() {
                 <Card.Text>
                     Location: {showUpperCase(user.location)} | Phone: {user.phone}
                 </Card.Text>
+                <ShowMoreStyledLink href='#'>
+                    {/* <StyledButton>Show More</StyledButton> */}
+                    some link
+                </ShowMoreStyledLink>
             </Card.Body>
         </Card>
     })
