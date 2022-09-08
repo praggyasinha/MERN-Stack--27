@@ -1,28 +1,27 @@
 import profileImg from '../media/images/profile-img.jpg';
 import './Users.css';
+
+import Card from 'react-bootstrap/Card';
+
 function Users() {
     const userDetails = {
         name: 'Manisha',
         location: 'BLR, India',
         phone: '+91-98765432190'
     }
-    // function showUpperCase(str){
-    //     return str.toUpperCase();
-    // }
     const showUpperCase = str => str.toUpperCase();
-    const userDetailBody = (
-        <div className="User">
-            <img src={profileImg} alt={userDetails.name + ' profile image'} className="profile-image" />
-            <h3>{userDetails.name}</h3>
-            <div>Location: {showUpperCase(userDetails.location)} | Phone: {userDetails.phone}</div>
-            <div>{2 + 2}</div>
-        </div>
-    );
 
     return (
-
         <div className="user-details">
-            {userDetailBody}
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" className='profile-image' src={profileImg} />
+                <Card.Body>
+                    <Card.Title>{userDetails.name}</Card.Title>
+                    <Card.Text>
+                        Location: {showUpperCase(userDetails.location)} | Phone: {userDetails.phone}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         </div>
     );
 }
