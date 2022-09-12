@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <script src="./ajax.js"></script>
+    <style>
+        .post {
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        .create-post {
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin: 5px 2px;
+
+        }
+        .form-control{
+            width: 100%;
+            border: 1px solid #595959;
+            border-radius: 4px;
+        }
+        .form-control:hover,.form-control:focus{
+            outline: 2px solid lightblue;
+            border-color: rgb(76, 195, 235);
+        }
+        .form-block{
+            max-width: 400px;
+        }
+        .hide{
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h2>Posts List</h2>
+    <div class="create-post">
+        <button onclick="showForm()" id="showFormButton">Add Post</button>
+        <button onclick="hideForm()" class="hide" id="hideFormButton">Close Post Form</button>
+        <div class="form-block hide" id="newPostForm">
+            <div name="new-post-form"  >
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <textarea name="description" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <button onclick="newPostSubmit(event)">Create Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="postList"></div>
+
+</body>
+
+</html>
