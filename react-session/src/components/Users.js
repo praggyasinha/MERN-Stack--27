@@ -4,11 +4,12 @@ import './Users.css';
 import Card from 'react-bootstrap/Card';
 import styled from "styled-components";
 
-const StyledButton = styled.button`
-  background-color: black;
-  font-size: 32px;
-  color: white;
-`;
+// const StyledButton = styled.button`
+//   background-color: black;
+//   font-size: 32px;
+//   color: white;
+// `;
+
 const ShowMoreStyledLink = styled.a`
     color:red;
     text-transform: uppercase;
@@ -57,5 +58,6 @@ function Users() {
 }
 
 export default Users;
+
 
 
