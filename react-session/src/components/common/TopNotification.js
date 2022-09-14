@@ -7,13 +7,13 @@ function TopNotification() {
     return (
         <Container fluid className="top-notification-bar">
             <Row>
-                <Col md="auto">
+                <Col xs="auto">
                     <Tick />
                 </Col>
                 <Col>
                     <marquee> Some notification will go here.</marquee>
                 </Col>
-                <Col md="auto">
+                <Col xs="auto">
                     <SocialLink />
                 </Col>
             </Row>

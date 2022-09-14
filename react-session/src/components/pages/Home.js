@@ -1,5 +1,5 @@
 import Header from "../common/Header";
-import Slider from "../common/Slider";
+import Slider from "../UI/Slider";
 
 function Home() {
     return ( 
