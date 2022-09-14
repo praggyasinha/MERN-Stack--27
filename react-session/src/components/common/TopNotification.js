@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Tick from './Tick';
 import SocialLink from './SocialLink';
+import Marquee from '../UI/Marquee';
 function TopNotification() {
     return (
         <Container fluid className="top-notification-bar">
@@ -11,7 +12,9 @@ function TopNotification() {
                     <Tick />
                 </Col>
                 <Col>
-                    <marquee> Some notification will go here.</marquee>
+                    <Marquee style={{ backgroundColor: 'rgb(199 199 199);' }}>
+                        Some notification will go here.
+                    </Marquee>
                 </Col>
                 <Col xs="auto">
                     <SocialLink />

@@ -1,22 +1,30 @@
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 function SocialLink() {
     return (
         <Row>
             <Col>
-                <a  href="#" >FB</a>
+                <a href="#" >
+                    <i className="fa-brands fa-facebook"></i>
+                </a>
             </Col>
             <Col>
-                <a  href="#" >TW</a>
+                <i className="fa-brands fa-twitter"></i>
             </Col>
             <Col>
-                <a  href="#" >LI</a>
+                <a href="#" >
+                    <i className="fa-brands fa-linkedin"></i>
+                </a>
             </Col>
             <Col>
-                <a  href="#" >In</a>
+                <a href="#" >
+                    <i className="fa-brands fa-instagram"></i>
+                </a>
             </Col>
             <Col>
-                <a  href="#" >Tu</a>
+                <a href="#" >
+                    <i className="fa-brands fa-tumblr"></i>
+                </a>
             </Col>
         </Row>
     );
