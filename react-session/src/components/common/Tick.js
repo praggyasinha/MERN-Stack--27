@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-function Tick() {
+const Tick=()=> {
     const [currentTime, setCurrentTime] = useState('--:--:-- --')
     setInterval(() => {
         const time = new Date();

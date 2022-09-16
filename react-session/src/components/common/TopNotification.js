@@ -1,10 +1,11 @@
+import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Tick from './Tick';
 import SocialLink from './SocialLink';
 import Marquee from '../UI/Marquee';
-function TopNotification() {
+const TopNotification = () => {
     return (
         <Container fluid className="top-notification-bar">
             <Row>

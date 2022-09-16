@@ -1,6 +1,7 @@
+import React  from "react";
 import { Col, Row } from "react-bootstrap";
 
-function SocialLink() {
+const SocialLink=()=> {
     return (
         <Row>
             <Col>

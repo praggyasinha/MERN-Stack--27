@@ -1,7 +1,8 @@
+import React  from "react";
 import TopNavbar from "./TopNavbar";
 import TopNotification from "./TopNotification";
 
-function Header() {
+const Header=() =>{
     return (
         <div>
             <TopNotification/>
