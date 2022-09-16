@@ -1,12 +1,13 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import React  from "react";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import profileImg from '../../../media/images/profile-img.jpg';
 
 const OurExpertise = () => {
     return (
-        <Container>
+        <Container className="mt-4">
             <Row>
-                <Col>
-                    Our Expertise
+                <Col className="text-center d-flex align-items-center">
+                    <h3>Our Expertise</h3>
                 </Col>
                 <Col>
                     <Card >
