@@ -14,7 +14,7 @@ const App = () => {
         {/* <Home /> */}
         <TodoList />
       </Card.Body>
-      <Card.Footer  className="p-0">
+      <Card.Footer  className="p-0 mt-3">
         <Footer />
       </Card.Footer>
     </Card>

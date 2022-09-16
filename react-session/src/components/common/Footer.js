@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <>
-            <footer className="mt-3">
+            <footer >
                 <div> Footer elements will go Here</div>
             </footer>
             <Copyright />
