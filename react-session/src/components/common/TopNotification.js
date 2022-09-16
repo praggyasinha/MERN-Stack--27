@@ -12,7 +12,7 @@ function TopNotification() {
                     <Tick />
                 </Col>
                 <Col>
-                    <Marquee style={{ backgroundColor: 'rgb(199 199 199);' }}>
+                    <Marquee style={{ backgroundColor: 'rgb(199 199 199)' }}>
                         Some notification will go here.
                     </Marquee>
                 </Col>
