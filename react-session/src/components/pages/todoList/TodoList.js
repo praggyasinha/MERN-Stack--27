@@ -36,7 +36,7 @@ const TodoList = () => {
                 <Row>
                     {todoList.map(todo => {
                         return (
-                            <Todo details={todo}/>
+                            <Todo details={todo} key={todo.id}/>
                         );
                     })}
                 </Row>
