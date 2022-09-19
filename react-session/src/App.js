@@ -1,15 +1,23 @@
-import Home from "./components/pages/Home";
-// import  Users  from "./components/Users";
-// import  UsersSample  from "./components/UsersSample";
-function App() {
+import React from "react";
+import { Card } from "react-bootstrap";
+import Footer from "./components/common/Footer";
+import Header from "./components/common/Header";
+import Home from "./components/pages/home/Home";
+import TodoList from "./components/pages/todoList/TodoList";
+const App = () => {
   return (
-    <div className="App">
-      {/* <h3>React Application</h3>
-      <hr/>
-      <Users/>
-      <UsersSample/> */}
-      <Home/>
-    </div>
+    <Card style={{minHeight:'100vh'}}>
+      <Card.Header  className="p-0">
+        <Header />
+      </Card.Header>
+      <Card.Body  className="p-0">
+        {/* <Home /> */}
+        <TodoList />
+      </Card.Body>
+      <Card.Footer  className="p-0 mt-3">
+        <Footer />
+      </Card.Footer>
+    </Card>
   );
 }
 

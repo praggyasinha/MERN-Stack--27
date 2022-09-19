@@ -1,3 +1,4 @@
+import React from "react";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -5,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function TopNavbar() {
+const TopNavbar = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container fluid>
@@ -18,13 +19,13 @@ function TopNavbar() {
                         navbarScroll
                     >
                         <Nav.Link href="#">Home</Nav.Link>
-                      
+
                         <NavDropdown title="Services" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#">
-                               Classroom Training
+                                Classroom Training
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#">
-                               Online Training
+                                Online Training
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#">
